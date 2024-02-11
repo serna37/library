@@ -37,14 +37,14 @@ for category in *(/); do
     for subgroup in *(/N); do
         cd $subgroup
         for sni in *(.N); do
-            echo "snippet $trigger_prefix$sp$category$sp$subgroup$sp$sni \"\" b" >> ../../$v
+            echo "snippet $trigger_prefix$sp$category$sp$subgroup$sp${sni:r} \"\" b" >> ../../$v
             cat $sni >> ../../$v
             echo "endsnippet" >> ../../$v
         done
         cd ..
     done
     for sni in *(.N); do
-        echo "snippet $trigger_prefix$sp$category$sp$sni \"\" b" >> ../$v
+        echo "snippet $trigger_prefix$sp$category$sp${sni:r} \"\" b" >> ../$v
         cat $sni >> ../$v
         echo "endsnippet" >> ../$v
     done
@@ -55,8 +55,8 @@ done
 sleep 0.5
 echo " >> STEP3. Move snippets files for extension root ( $snippet_dir )"
 cd $library_root
-generated=(*(.))
-mv *(.) $snippet_dir
+generated=(*.snippets)
+mv *.snippets $snippet_dir
 
 sleep 0.5
 echo " >> STEP4. Include snippets in the root file"
@@ -66,7 +66,7 @@ echo "" > $root_sni
 echo "extends cpp.template" >> $root_sni
 echo "extends algo" >> $root_sni
 for v in $generated; do
-    echo "extends $v" >> $root_sni
+    echo "extends ${v:r}" >> $root_sni
 done
 
 echo "===================================================="
