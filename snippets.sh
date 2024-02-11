@@ -62,7 +62,7 @@ sleep 0.5
 echo " >> STEP4. Include snippets in the root file"
 cd $snippet_dir
 root_sni=cpp.snippets
-echo "" > $root_sni
+echo "# generate: $(date '+%Y-%m-%d %H:%M:%S')" > $root_sni
 echo "extends cpp.template" >> $root_sni
 echo "extends algo" >> $root_sni
 for v in $generated; do
