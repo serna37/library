@@ -106,8 +106,8 @@ AtCoder の問題は，dropbox (https://atcoder.jp/posts/20) にあれば割と�
 {prefix}_{カテゴリ}_{サブグループ}_{スニペット}
 ```
 もちろん拡張子は含まない。<br>
-例) `./struct/seg/segment_tree.hpp`の場合
+例) `./range/seg/segment_tree.hpp`の場合
 ```
-ww_struct_seg_segment_tree
+ww_range_seg_segment_tree
 ```
 ※オプションはすべて`b`です。
