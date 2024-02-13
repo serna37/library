@@ -30,7 +30,7 @@ template <typename Monoid> struct FwkTree {
         }
     }
     void act(int i, const T &x) {
-        tot += x;
+        bind(tot, x);
         for (++i; i <= N; i += i & -i) bind(node[i], x);
     }
     T get(int r) {
