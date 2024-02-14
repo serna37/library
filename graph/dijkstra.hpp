@@ -11,10 +11,10 @@ pair<vector<T>, vector<int>> dijkstra(const Graph &G, int s) {
         auto [dv, v] = q.top();
         q.pop();
         if (dv > dis[v]) continue;
-        for (auto &&n : G[v]) {
-            int cost = n.first, nv = n.second;
-            if (dis[nv] > dis[v] + cost) {
-                dis[nv] = dis[v] + cost;
+        for (auto [cost, nv] : G[v]) {
+            T c = dv + cost;
+            if (dis[nv] > c) {
+                dis[nv] = c;
                 q.emplace(dis[nv], nv);
                 route[nv] = v;
             }
