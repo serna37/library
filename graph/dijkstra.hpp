@@ -1,5 +1,5 @@
-template <typename T, typename Graph>
-pair<vector<T>, vector<int>> dijkstra(const Graph &G, int s) {
+template <typename T>
+pair<vector<T>, vector<int>> dijkstra(const Graph<T> &G, int s) {
     int N = G.size();
     using P = pair<T, int>;
     priority_queue<P, vector<P>, greater<P>> q;
@@ -11,12 +11,12 @@ pair<vector<T>, vector<int>> dijkstra(const Graph &G, int s) {
         auto [dv, v] = q.top();
         q.pop();
         if (dv > dis[v]) continue;
-        for (auto [cost, nv] : G[v]) {
+        for (auto [from, to, cost, id] : G[v]) {
             T c = dv + cost;
-            if (dis[nv] > c) {
-                dis[nv] = c;
-                q.emplace(dis[nv], nv);
-                route[nv] = v;
+            if (dis[to] > c) {
+                dis[to] = c;
+                q.emplace(dis[to], to);
+                route[to] = v;
             }
         }
     }
