@@ -1,4 +1,5 @@
-template <typename T> vector<vector<T>> WarshallFroyd(const Graph<T> &G) {
+template <typename T>
+pair<vector<vector<T>>, bool> WarshallFroyd(const Graph<T> &G) {
     int N = G.size();
     vector<vector<T>> dis(N, vector<T>(N, inf<T>));
     for (int v = 0; v < N; v++) {
@@ -16,5 +17,12 @@ template <typename T> vector<vector<T>> WarshallFroyd(const Graph<T> &G) {
             }
         }
     }
-    return dis;
+    bool negativeCycle = false;
+    for (int i = 0; i < N; i++) {
+        if (dis[i][i] < 0) {
+            negativeCycle = true;
+            break;
+        }
+    }
+    return {dis, negativeCycle};
 }
