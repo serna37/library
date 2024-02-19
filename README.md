@@ -80,14 +80,8 @@ AtCoder の問題は，dropbox (https://atcoder.jp/posts/20) にあれば割と�
 
 ## フォルダ構成の規則
 - 第一階層はディレクトリのみ。
-- 第二階層はディレクトリかファイル
-- 第三階層はファイルのみ。
-(トリガが長いとUltiSnipの挙動がバグるため)
-
-第一階層を「`カテゴリ`」<br>
-第二階層のフォルダを「`サブグループ`」<br>
-第二階層、第三階層のファイルを「`スニペット`」<br>
-と呼ぶことにする。
+- 第二階層以降ははディレクトリかファイル
+- なるべく三階層までにする(トリガが長いとUltiSnipの挙動がバグるため)
 
 ## スニペットについて
 - 私の環境がMacBookM2<img src="https://img.shields.io/badge/-Vim-019733.svg?logo=vim&style=flat">`9.0` + [`UltiSnips`](https://github.com/SirVer/ultisnips) ([`coc.nvim`](https://github.com/neoclide/coc.nvim))なので、それに合わせてます
@@ -95,15 +89,16 @@ AtCoder の問題は，dropbox (https://atcoder.jp/posts/20) にあれば割と�
 - `cpp.template.snippets`, `algo.snippets`も同様。<br>
 (これらはライブラリではなく、タブストップなどをしっかり入れた純粋なスニペットのため。)<br>
 →逆に、この3ファイル以外はここで管理。<br>
-棲み分けの基準は`まるごとコピペかどうか`としてます
+棲み分けの基準は`まるごとコピペかどうか`としてます、丸ごとコピペはこっちで管理。
 
 ## スニペット自動作成
-- `snippets.sh`をzshで実行。(glob使ってます)([`genact`](https://github.com/svenstaro/genact)や[`cmatrix`](https://github.com/abishekvashok/cmatrix)などおふざけコマンドいれてるので注意)
+- `snippets.sh`をzshで実行。([`genact`](https://github.com/svenstaro/genact)や[`cmatrix`](https://github.com/abishekvashok/cmatrix)などおふざけコマンドいれてるので注意)
 - 何かあれば`snippets.sh`をカスタムする
+- 200文字を超えないように分割してバンドル(1ファイルが長すぎると呼び出しが重いため)
 - スニペットトリガの命名規則
 ```
-{prefix}_{カテゴリ}_{スニペット}
-{prefix}_{カテゴリ}_{サブグループ}_{スニペット}
+{prefix}_{フォルダ}_{ファイル}
+{prefix}_{フォルダ}_{フォルダ}_..._{ファイル}
 ```
 もちろん拡張子は含まない。<br>
 例) `./range/seg/segment_tree.hpp`の場合
