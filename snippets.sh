@@ -9,6 +9,7 @@ no_del=(
 cpp.snippets
 cpp.template.snippets
 algo.snippets
+call.snippets
 )
 
 genact -s 5 --exit-after-modules 1 -m botnet
@@ -65,6 +66,7 @@ root_sni=cpp.snippets
 echo "# generate: $(date '+%Y-%m-%d %H:%M:%S')" > $root_sni
 echo "extends cpp.template" >> $root_sni
 echo "extends algo" >> $root_sni
+echo "extends call" >> $root_sni
 for v in $generated; do
     echo "extends ${v:r}" >> $root_sni
 done
