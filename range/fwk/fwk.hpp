@@ -1,5 +1,3 @@
-// TODO lazy update
-// TODO binary_search
 template <typename Monoid> struct FwkTree {
     using M = Monoid;
     using T = typename M::value_type;
