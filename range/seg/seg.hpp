@@ -1,4 +1,4 @@
-template <class Monoid> struct SegTree {
+template <typename Monoid> struct SegTree {
     using M = Monoid;
     using T = typename M::value_type;
 
@@ -50,7 +50,7 @@ template <class Monoid> struct SegTree {
     T top() {
         return node[1];
     }
-    template <class F> int max_right(const F &test, int L) {
+    template <typename F> int max_right(const F &test, int L) {
         if (L == N) return N;
         L += size;
         T sm = M::e;
@@ -67,7 +67,7 @@ template <class Monoid> struct SegTree {
         } while ((L & -L) != L);
         return N;
     }
-    template <class F> int min_left(const F &test, int R) {
+    template <typename F> int min_left(const F &test, int R) {
         if (R == 0) return 0;
         R += size;
         T sm = M::e;

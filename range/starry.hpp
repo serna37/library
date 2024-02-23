@@ -1,4 +1,4 @@
-template <class T> struct StarrySkyTree {
+template <typename T> struct StarrySkyTree {
   private:
     int N, log, sz;
     vector<T> node;
