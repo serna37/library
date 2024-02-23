@@ -1,4 +1,3 @@
-// TODO binary_search
 template <typename MonoidAct> struct LazySegTree {
     using M = typename MonoidAct::M_m;
     using A = typename MonoidAct::M_a;
@@ -96,5 +95,44 @@ template <typename MonoidAct> struct LazySegTree {
             if (((l >> i) << i) != l) update(l >> i);
             if (((r >> i) << i) != r) update((r - 1) >> i);
         }
+    }
+    template <typename F> int max_right(const F &test, int L) {
+        if (L == N) return N;
+        L += size;
+        for (int i = log; i >= 1; --i) propagate(L >> i);
+        T sm = M::e;
+        do {
+            while (L % 2 == 0) L >>= 1;
+            if (!test(M::op(sm, node[L]))) {
+                while (L < size) {
+                    propagate(L);
+                    L = 2 * L;
+                    if (test(M::op(sm, node[L]))) sm = M::op(sm, node[L++]);
+                }
+                return L - size;
+            }
+            sm = M::op(sm, node[L++]);
+        } while ((L & -L) != L);
+        return N;
+    }
+    template <typename F> int min_left(const F test, int R) {
+        if (R == 0) return 0;
+        R += size;
+        for (int i = log; i >= 1; i--) propagate((R - 1) >> i);
+        T sm = M::e;
+        do {
+            R--;
+            while (R > 1 && (R % 2)) R >>= 1;
+            if (!test(M::op(node[R], sm))) {
+                while (R < size) {
+                    propagate(R);
+                    R = 2 * R + 1;
+                    if (test(M::op(node[R], sm))) sm = M::op(node[R--], sm);
+                }
+                return R + 1 - size;
+            }
+            sm = M::op(node[R], sm);
+        } while ((R & -R) != R);
+        return 0;
     }
 };
