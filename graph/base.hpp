@@ -5,4 +5,16 @@ template <typename T> struct Edge {
     Edge(int from, int to, T cost = 1, int id = -1)
         : from(from), to(to), cost(cost), id(id){};
 };
-template <typename T> using Graph = vector<vector<Edge<T>>>;
+template <typename T> struct Graph {
+    vector<vector<Edge<T>>> G;
+    Graph(int N) : G(N){};
+    vector<Edge<T>> operator[](T v) const {
+        return G[v];
+    }
+    int size() const {
+        return G.size();
+    }
+    void add(int from, int to, T cost = 1, int id = -1) {
+        G[from].push_back({from, to, cost, id});
+    }
+};
