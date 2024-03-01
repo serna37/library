@@ -1,3 +1,8 @@
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * modコンビネーション
+ */
 template <typename T> T modpow(T a, T n) {
     T ans = 1;
     while (n > 0) {
@@ -20,3 +25,4 @@ long long modfact(int x) {
 long long mod_combination(int n, int k) {
     return modfact(n) * modinv(modfact(k)) % MOD * modinv(modfact(n - k)) % MOD;
 }
+/** --- */

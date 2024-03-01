@@ -1,3 +1,8 @@
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * 遅延セグメント木
+ */
 template <typename MonoidAct> struct LazySegTree {
     using M = typename MonoidAct::M_m;
     using A = typename MonoidAct::M_a;

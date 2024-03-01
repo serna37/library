@@ -1,3 +1,8 @@
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * モノイド
+ */
 template <typename T> struct Mgcd {
     using value_type = T;
     static constexpr T e = 1;

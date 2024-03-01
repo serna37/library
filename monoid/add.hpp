@@ -1,3 +1,8 @@
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * モノイド
+ */
 template <typename T> struct Madd {
     using value_type = T;
     static constexpr T e = 0;

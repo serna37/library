@@ -1,3 +1,9 @@
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * サイクル検出
+ * @return サイクルな辺の集合
+ */
 template <typename T>
 vector<Edge<T>> cycle_detect(const Graph<T> &G, bool directed) {
     int sz = G.size();

@@ -1,3 +1,8 @@
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * トポロジカルソート
+ */
 template <typename Graph> vector<int> topological_sort(const Graph &G) {
     int N = G.size();
     vector<int> seen(N), sorted;

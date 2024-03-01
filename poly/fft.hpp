@@ -1,3 +1,8 @@
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * FFT
+ */
 namespace FFT {
 using real = double;
 struct C {

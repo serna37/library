@@ -1,3 +1,8 @@
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * ランレングス圧縮
+ */
 template <typename STRING = string, typename CHAR = char>
 vector<pair<CHAR, int>> run_length(STRING &S) {
     vector<pair<CHAR, int>> res;

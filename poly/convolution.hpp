@@ -1,3 +1,8 @@
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * 畳み込み FFT
+ */
 template <typename R>
 vector<long long> convolution_fft(const vector<R> &a, const vector<R> &b) {
     using C = FFT::C;

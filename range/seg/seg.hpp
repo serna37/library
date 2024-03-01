@@ -1,3 +1,8 @@
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * セグメント木
+ */
 template <typename Monoid> struct SegTree {
     using M = Monoid;
     using T = typename M::value_type;

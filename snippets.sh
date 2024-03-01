@@ -12,7 +12,7 @@ algo.snippets
 call.snippets
 )
 
-genact -s 5 --exit-after-modules 1 -m botnet
+genact -s 10 --exit-after-modules 1 -m botnet
 echo "===================================================="
 echo " START"
 echo "===================================================="
@@ -48,7 +48,8 @@ for v in $files; do
     sni=(${(s:.:)file})
     # ww_aaa_bbb
     echo "snippet $trigger_prefix$sni[1] \"\" b" >> $create
-    cat $v >> $create
+    # ヘッダ2行を無視
+    tail -n +3 $v >> $create
     echo "endsnippet" >> $create
 done
 
@@ -74,5 +75,5 @@ done
 echo "===================================================="
 echo " DONE"
 echo "===================================================="
-genact -s 3 --exit-after-modules 1 -m bruteforce
+genact -s 10 --exit-after-modules 1 -m bruteforce
 cmatrix

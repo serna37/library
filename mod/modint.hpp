@@ -1,3 +1,9 @@
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * modint
+ * @brief 演算のみ
+ */
 template <long long mod> struct modint {
   private:
     long long v;

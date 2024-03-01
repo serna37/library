@@ -1,3 +1,8 @@
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * mod階乗
+ */
 vector<long long> mf;
 long long modfact(int x) {
     if ((int)mf.size() > x) return mf[x];

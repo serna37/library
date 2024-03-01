@@ -1,3 +1,9 @@
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * 素集合データ構造 Disjoint-Set
+ * @brief 重みなし
+ */
 struct UnionFind {
   private:
     int N;

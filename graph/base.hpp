@@ -1,3 +1,8 @@
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * 辺
+ */
 template <typename T> struct Edge {
     int from, to;
     T cost;
@@ -5,6 +10,9 @@ template <typename T> struct Edge {
     Edge(int from, int to, T cost = 1, int id = -1)
         : from(from), to(to), cost(cost), id(id){};
 };
+/**
+ * グラフ
+ */
 template <typename T> struct Graph {
     vector<vector<Edge<T>>> G;
     Graph(int N) : G(N){};

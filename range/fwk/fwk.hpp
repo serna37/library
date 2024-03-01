@@ -1,3 +1,8 @@
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * Fenwick Tree
+ */
 template <typename Monoid> struct FwkTree {
     using M = Monoid;
     using T = typename M::value_type;

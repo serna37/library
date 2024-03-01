@@ -1,3 +1,8 @@
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * mod二分累乗
+ */
 template <typename T> T modpow(T a, T n) {
     T ans = 1;
     while (n > 0) {

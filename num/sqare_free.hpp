@@ -1,4 +1,9 @@
-// idx: 自然数, val: 平方因子を除いたもの
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * 平方因子除去
+ * @return idx: 自然数, val: 平方因子を除いたもの
+ */
 vector<int> sqarefree(int mx = 2e5) {
     vector<int> S(mx + 1);
     for (int i = 1; i <= mx; i++) S[i] = i;

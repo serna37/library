@@ -1,3 +1,8 @@
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * セグメント木 区間カウント
+ */
 template <typename T> struct SegRCQ {
   private:
     int N;

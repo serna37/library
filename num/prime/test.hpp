@@ -1,3 +1,8 @@
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * 素数判定
+ */
 template <typename T> bool is_p(T N) {
     if (N == 2) return true;
     if (N == 1 or N % 2 == 0) return false;

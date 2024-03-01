@@ -1,3 +1,8 @@
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * 素数判定
+ */
 template <typename T> T nCk(int n, int k) {
     if (k < 0 || n < k) return 0;
     T ret = 1;

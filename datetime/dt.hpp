@@ -1,3 +1,8 @@
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * 日付関連
+ */
 struct DateTime {
     int year, month, day;
     DateTime() : year(0), month(0), day(0){};

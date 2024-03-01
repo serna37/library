@@ -1,3 +1,10 @@
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * ダイクストラ
+ * @brief 単一始点
+ * @return 最短距離、経路
+ */
 template <typename T>
 pair<vector<T>, vector<int>> dijkstra(const Graph<T> &G, int s) {
     int N = G.size();

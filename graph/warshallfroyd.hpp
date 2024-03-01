@@ -1,3 +1,10 @@
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * ワーシャルフロイド
+ * @brief 全頂点対
+ * @return 最短距離、負サイクル有無
+ */
 template <typename T>
 pair<vector<vector<T>>, bool> WarshallFroyd(const Graph<T> &G) {
     int N = G.size();

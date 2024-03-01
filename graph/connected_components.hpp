@@ -1,3 +1,9 @@
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * 連結成分分解
+ * @return 連結な頂点群の集合
+ */
 template <typename Graph>
 vector<vector<int>> connected_components(const Graph &G) {
     vector<vector<int>> components;

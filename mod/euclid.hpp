@@ -1,3 +1,5 @@
+#include <bits/stdc++.h>
+using namespace std;
 const int MAX = 3e5;
 long long fac[MAX], finv[MAX], inv[MAX];
 void extEuclidInv() {

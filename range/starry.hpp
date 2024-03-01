@@ -1,3 +1,8 @@
+#include <bits/stdc++.h>
+using namespace std;
+/**
+ * 星空木
+ */
 template <typename T> struct StarrySkyTree {
   private:
     int N, log, sz;
