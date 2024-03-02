@@ -50,3 +50,22 @@ template <typename Graph> vector<vector<int>> scc(const Graph &G) {
     for (int i = 0; i < G.size(); i++) g[ids[i]].push_back(i);
     return g;
 }
+/**
+ * 強連結成分分解
+ * @return 強連結成分なグラフ構造のリスト。成分同士の情報ロストに注意
+ */
+template <typename T> vector<Graph<T>> sccgraph(const Graph<T> &G) {
+    int N = G.size();
+    vector<vector<int>> components = scc(G);
+    vector<Graph<T>> res;
+    for (auto comp : components) {
+        Graph<T> sub(N);
+        for (auto v : comp) {
+            for (auto [from, to, cost, id] : G[v]) {
+                sub.add(from, to, cost, id);
+            }
+        }
+        res.push_back(sub);
+    }
+    return res;
+}
