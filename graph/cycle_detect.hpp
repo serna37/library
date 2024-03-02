@@ -9,7 +9,7 @@ vector<Edge<T>> cycle_detect(const Graph<T> &G, bool directed) {
     int sz = G.size();
     vector<bool> seen(sz), finished(sz);
     vector<Edge<T>> history;
-    auto dfs = [&](auto f, int v, const Edge<T> &e) -> int {
+    auto dfs = [&](auto &f, int v, const Edge<T> &e) -> int {
         seen[v] = true;
         history.push_back(e);
         for (const auto &ne : G[v]) {

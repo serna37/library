@@ -10,7 +10,7 @@ vector<vector<int>> connected_components(const Graph &G) {
     vector<int> com;
     int N = G.size();
     vector<bool> seen(N, false);
-    auto dfs = [&](auto f, int v) -> void {
+    auto dfs = [&](auto &f, int v) -> void {
         seen[v] = true;
         com.push_back(v);
         for (auto [from, to, cost, id] : G[v]) {

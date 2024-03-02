@@ -10,7 +10,7 @@ vector<vector<pair<int, int>>> connected_components_grid(const Graph &G, int H,
     vector<vector<pair<int, int>>> components;
     vector<pair<int, int>> com;
     vector<vector<bool>> seen(H, vector<bool>(W, false));
-    auto dfs = [&](auto f, int y, int x) -> void {
+    auto dfs = [&](auto &f, int y, int x) -> void {
         seen[y][x] = true;
         com.push_back({y, x});
         for (int i = 0; i < 8; i++) {
