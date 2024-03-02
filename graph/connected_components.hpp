@@ -26,3 +26,22 @@ vector<vector<int>> connected_components(const Graph &G) {
     }
     return components;
 }
+/**
+ * 連結成分分解
+ * @return 連結なグラフ構造のリスト
+ */
+template <typename T> vector<Graph<T>> ccgraph(const Graph<T> &G) {
+    int N = G.size();
+    vector<vector<int>> components = connected_components(G);
+    vector<Graph<T>> res;
+    for (auto comp : components) {
+        Graph<int> sub(N);
+        for (auto v : comp) {
+            for (auto [from, to, cost, id] : G[v]) {
+                sub.add(from, to, cost, id);
+            }
+        }
+        res.push_back(sub);
+    }
+    return res;
+}
