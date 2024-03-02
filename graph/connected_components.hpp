@@ -35,7 +35,7 @@ template <typename T> vector<Graph<T>> ccgraph(const Graph<T> &G) {
     vector<vector<int>> components = connected_components(G);
     vector<Graph<T>> res;
     for (auto comp : components) {
-        Graph<int> sub(N);
+        Graph<T> sub(N);
         for (auto v : comp) {
             for (auto [from, to, cost, id] : G[v]) {
                 sub.add(from, to, cost, id);
