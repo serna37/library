@@ -1,7 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
+// TODO 削除予定
 /**
  * セグメント木 区間カウント
+ * @brief 削除予定
  */
 template <typename T> struct SegRCQ {
   private:
@@ -22,7 +24,7 @@ template <typename T> struct SegRCQ {
         return node[i + N];
     }
     void set(int i, T x) {
-        node[i += N] = x;
+        node[i += N] = {x, 1};
         while (i >>= 1) bind(i);
     }
     T get(int l, int r, int x) {
