@@ -6,7 +6,7 @@ using namespace std;
  * @return 最短距離、経路
  */
 template <typename T>
-pair<vector<T>, vector<int>> dijkstra(const Graph<T> &G, int s) {
+pair<vector<T>, vector<int>> Dijkstra(const Graph<T> &G, int s) {
     int N = G.size();
     using P = pair<T, int>;
     priority_queue<P, vector<P>, greater<P>> q;

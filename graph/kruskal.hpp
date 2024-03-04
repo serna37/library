@@ -11,7 +11,7 @@ template <typename T> struct MinSpanTree {
  * クラスカル
  * @return 最小全域木
  */
-template <typename T> MinSpanTree<T> kruskal(vector<Edge<T>> edges, int v_cnt) {
+template <typename T> MinSpanTree<T> Kruskal(vector<Edge<T>> edges, int v_cnt) {
     sort(edges.begin(), edges.end(),
          [](const Edge<T> &a, const Edge<T> &b) { return a.cost < b.cost; });
     UnionFind tree(v_cnt);
