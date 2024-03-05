@@ -11,7 +11,7 @@ pair<vector<vector<T>>, bool> WarshallFroyd(const Graph<T> &G) {
     vector<vector<T>> dis(N, vector<T>(N, inf<T>));
     for (int v = 0; v < N; v++) {
         dis[v][v] = 0;
-        for (auto [from, to, cost, id] : G[v]) {
+        for (auto &&[from, to, cost, id] : G[v]) {
             dis[v][to] = min(dis[v][to], cost);
         }
     }

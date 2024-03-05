@@ -13,7 +13,7 @@ vector<vector<int>> connected_components(const Graph &G) {
     auto dfs = [&](auto &f, int v) -> void {
         seen[v] = true;
         com.push_back(v);
-        for (auto [from, to, cost, id] : G[v]) {
+        for (auto &&[from, to, cost, id] : G[v]) {
             if (seen[to]) continue;
             f(f, to);
         }
@@ -34,10 +34,10 @@ template <typename T> vector<Graph<T>> ccgraph(const Graph<T> &G) {
     int N = G.size();
     vector<vector<int>> components = connected_components(G);
     vector<Graph<T>> res;
-    for (auto comp : components) {
+    for (auto &&comp : components) {
         Graph<T> sub(N);
-        for (auto v : comp) {
-            for (auto [from, to, cost, id] : G[v]) {
+        for (auto &&v : comp) {
+            for (auto &&[from, to, cost, id] : G[v]) {
                 sub.add(from, to, cost, id);
             }
         }

@@ -58,10 +58,10 @@ template <typename T> vector<Graph<T>> sccgraph(const Graph<T> &G) {
     int N = G.size();
     vector<vector<int>> components = scc(G);
     vector<Graph<T>> res;
-    for (auto comp : components) {
+    for (auto &&comp : components) {
         Graph<T> sub(N);
-        for (auto v : comp) {
-            for (auto [from, to, cost, id] : G[v]) {
+        for (auto &&v : comp) {
+            for (auto &&[from, to, cost, id] : G[v]) {
                 sub.add(from, to, cost, id);
             }
         }

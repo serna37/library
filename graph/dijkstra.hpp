@@ -18,7 +18,7 @@ pair<vector<T>, vector<int>> Dijkstra(const Graph<T> &G, int s) {
         auto [dv, v] = q.top();
         q.pop();
         if (dv > dis[v]) continue;
-        for (auto [from, to, cost, id] : G[v]) {
+        for (auto &&[from, to, cost, id] : G[v]) {
             T c = dv + cost;
             if (dis[to] > c) {
                 dis[to] = c;
