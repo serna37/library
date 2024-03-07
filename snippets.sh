@@ -1,7 +1,7 @@
 # profile
 library_root=~/git/library/
 snippet_dir=~/.vim/UltiSnips/
-trigger_prefix=ww
+trigger_prefix=lib
 work_dir=__work
 
 # whitelist
