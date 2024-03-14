@@ -68,9 +68,12 @@ echo " >> STEP4. Bundle snippets in the root file"
 cd $snippet_dir
 root_sni=cpp.snippets
 echo "# generate: $(date '+%Y-%m-%d %H:%M:%S')" > $root_sni
-echo "extends cpp.template" >> $root_sni
-echo "extends algo" >> $root_sni
-echo "extends call" >> $root_sni
+for v in $no_del; do
+    if [[ $v == "cpp.snippets" ]]; then
+      continue
+    fi
+    echo "extends ${v:r}" >> $root_sni
+done
 for v in $generated; do
     echo "extends ${v:r}" >> $root_sni
 done
