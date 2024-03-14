@@ -62,6 +62,8 @@
 ---
 <!-- Description -->
 以下ドキュメントは日本語です。ゆるして。
+主にC++のライブラリを、スニペット化するために持っておいているもの。
+ヘッダincludeする気はなく、あくまでスニペット呼び出し目的でライブラリストックしてるだけです。
 
 ## Verify
 テストはLibraryCheckerとかでやろうかと思ってます。WIP
@@ -85,10 +87,9 @@ AtCoder の問題は，dropbox (https://atcoder.jp/posts/20) にあれば割と�
 
 ## スニペットについて
 - 私の環境がMacBookM2<img src="https://img.shields.io/badge/-Vim-019733.svg?logo=vim&style=flat">`9.0` + [`UltiSnips`](https://github.com/SirVer/ultisnips) ([`coc.nvim`](https://github.com/neoclide/coc.nvim))なので、それに合わせてます
-- `cpp.snippets`本体は別レポジトリ[dotfiles](https://github.com/serna37/dotfiles)で管理(vimやzsh、clangの設定もここ)
-- `cpp.template.snippets`, `algo.snippets`, `call.snippets`も同様。<br>
+- `cpp.snippets`本体などは別レポジトリ[dotfiles](https://github.com/serna37/dotfiles)で管理(vimやzsh、clangの設定もここ)
+- `template.snippets`, `algo.snippets`, なども同様。<br>
 (これらはライブラリではなく、タブストップなどをしっかり入れた純粋なスニペットのため。)<br>
-→逆に、この3ファイル以外はここで管理。<br>
 棲み分けの基準は`まるごとコピペかどうか`としてます、丸ごとコピペはこっちで管理。
 
 ## スニペット自動作成

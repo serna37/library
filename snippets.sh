@@ -7,7 +7,10 @@ work_dir=__work
 # whitelist
 no_del=(
 cpp.snippets
-cpp.template.snippets
+template.snippets
+const.snippets
+input.snippets
+output.snippets
 algo.snippets
 call.snippets
 )
