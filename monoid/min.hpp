@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 /**
- * モノイド
+ * 最小値モノイド
  */
 template <typename T> struct Mmin {
     using value_type = T;

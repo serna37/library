@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 /**
- * モノイド
+ * 最大値モノイド
  */
 template <typename T> struct Mmax {
     using value_type = T;

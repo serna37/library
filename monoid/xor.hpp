@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 /**
- * 乗算モノイド
+ * 排他的論理和モノイド
  */
-template <typename T> struct Mmul {
+template <typename T> struct Mxor {
     using value_type = T;
-    static constexpr T e = 1;
+    static constexpr T e = 0;
     static constexpr T op(const T &x, const T &y) noexcept {
-        return x * y;
+        return x ^ y;
     }
 };

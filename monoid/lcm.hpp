@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 /**
- * 乗算モノイド
+ * 最小公倍数モノイド
  */
-template <typename T> struct Mmul {
+template <typename T> struct Mlcm {
     using value_type = T;
     static constexpr T e = 1;
     static constexpr T op(const T &x, const T &y) noexcept {
-        return x * y;
+        return lcm(x, y);
     }
 };

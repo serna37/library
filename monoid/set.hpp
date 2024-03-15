@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 /**
- * 加算モノイド
+ * 代入モノイド
  */
 template <typename T> struct Madd {
     using value_type = T;
-    static constexpr T e = 0;
+    static constexpr T e = inf<T>; // 制約外であること
     static constexpr T op(const T &x, const T &y) noexcept {
-        return x + y;
+        return y == e ? x : y;
     }
 };
