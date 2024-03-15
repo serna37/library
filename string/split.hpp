@@ -3,17 +3,28 @@ using namespace std;
 /**
  * 文字列をcharで分割
  */
-vector<string> split(const string &S, const char &c) {
-    vector<string> res;
-    string t = "";
-    for (char v : S) {
-        if (v == c) {
-            res.emplace_back(t);
-            t.clear();
+vector<string> split(const string &S, const char &sep) {
+    vector<string> res = {""};
+    for (auto &&v : S) {
+        if (v == sep) {
+            res.emplace_back("");
         } else {
-            t += v;
+            res.back() += v;
         }
     }
-    res.emplace_back(t);
+    return res;
+}
+/**
+ * 文字列を文字列で分割
+ */
+vector<string> split(const string &S, const string &sep) {
+    vector<string> res = {""};
+    for (auto &&v : S) {
+        if (count(sep.begin(), sep.end(), v)) {
+            res.emplace_back("");
+        } else {
+            res.back() += v;
+        }
+    }
     return res;
 }
