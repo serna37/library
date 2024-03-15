@@ -2,6 +2,7 @@
 using namespace std;
 /**
  * Lazy Segment Tree
+ * @brief 区間更新 区間取得
  */
 template <typename MonoidAct> struct LazySegTree {
     using M = typename MonoidAct::M_m;
