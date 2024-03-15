@@ -15,12 +15,12 @@ vector<string> split(const string &S, const char &sep) {
     return res;
 }
 /**
- * 文字列を文字列で分割
+ * 文字列を複数の区切り文字で分割
  */
-vector<string> split(const string &S, const string &sep) {
+vector<string> split(const string &S, const string &seps) {
     vector<string> res = {""};
     for (auto &&v : S) {
-        if (count(sep.begin(), sep.end(), v)) {
+        if (count(seps.begin(), seps.end(), v)) {
             res.emplace_back("");
         } else {
             res.back() += v;
