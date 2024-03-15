@@ -2,6 +2,7 @@
 using namespace std;
 /**
  * Fenwick Tree
+ * @brief 1点更新 区間取得
  */
 template <typename Monoid> struct FwkTree {
     using M = Monoid;
