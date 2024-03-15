@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 /**
- * セグメント木
+ * Segment Tree
  */
 template <typename Monoid> struct SegTree {
     using M = Monoid;

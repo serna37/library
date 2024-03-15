@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 /**
- * 遅延セグメント木
+ * Lazy Segment Tree
  */
 template <typename MonoidAct> struct LazySegTree {
     using M = typename MonoidAct::M_m;
