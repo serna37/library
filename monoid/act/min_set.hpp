@@ -10,6 +10,6 @@ template <typename T> struct MAminset {
     using A = typename M_a::value_type;
     static constexpr M act(const M &m, const A &a, const long long &size) {
         (void)size; // unused
-        return a == A::e ? m : a;
+        return a == inf<T> ? m : a;
     }
 };
