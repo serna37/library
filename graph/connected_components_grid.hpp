@@ -13,7 +13,7 @@ vector<vector<pair<int, int>>> connected_components_grid(const Graph &G, int H,
     auto dfs = [&](auto &f, int y, int x) -> void {
         seen[y][x] = true;
         com.push_back({y, x});
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < (int)dy.size(); i++) {
             int Y = y + dy[i], X = x + dx[i];
             if (Y < 0 or X < 0 or H <= Y or W <= X) continue;
             if (seen[Y][X]) continue;

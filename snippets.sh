@@ -8,9 +8,7 @@ work_dir=__work
 no_del=(
 cpp.snippets
 template.snippets
-const.snippets
-input.snippets
-output.snippets
+io.snippets
 algo.snippets
 call.snippets
 )
