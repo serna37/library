@@ -46,7 +46,7 @@ template <typename T, bool rev = false> struct StarrySkyTree {
     }
     vector<T> getall() {
         vector<T> res(N);
-        for (int i = 0; i < N; i++) res[i] = sum(i + sz) * rv;
+        for (int i = 0; i < N; ++i) res[i] = sum(i + sz) * rv;
         return res;
     }
     void set(int p, const T &x) {

@@ -40,7 +40,7 @@ struct UnionFind {
     }
     vector<vector<int>> groups() {
         vector<vector<int>> ret(N);
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; i < N; ++i) {
             ret[(*this)[i]].emplace_back(i);
         }
         ret.erase(remove_if(begin(ret), end(ret),

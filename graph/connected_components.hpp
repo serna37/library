@@ -19,7 +19,7 @@ vector<vector<int>> connected_components(const Graph &G) {
             f(f, to);
         }
     };
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i < N; ++i) {
         if (seen[i]) continue;
         com.clear();
         dfs(dfs, i);

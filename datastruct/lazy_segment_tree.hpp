@@ -52,7 +52,7 @@ template <typename MonoidAct> struct LazySegTree {
         return node[p];
     }
     vector<T> getall() {
-        for (int i = 1; i < size; i++) propagate(i);
+        for (int i = 1; i < size; ++i) propagate(i);
         return {node.begin() + size, node.begin() + size + N};
     }
     void set(int p, const T &x) {

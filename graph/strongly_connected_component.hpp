@@ -30,10 +30,10 @@ pair<int, vector<int>> strongly_connected_component(const Graph &G) {
             ++C;
         }
     };
-    for (int v = 0; v < N; v++) {
+    for (int v = 0; v < N; ++v) {
         if (ord[v] == -1) dfs(dfs, v);
     }
-    for (int v = 0; v < N; v++) {
+    for (int v = 0; v < N; ++v) {
         comp[v] = C - 1 - comp[v];
     }
     return {C, comp};
@@ -46,9 +46,9 @@ template <typename Graph> vector<vector<int>> scc(const Graph &G) {
     auto [cnt, ids] = strongly_connected_component(G);
     vector<int> c(cnt);
     vector<vector<int>> g(cnt);
-    for (auto &&v : ids) c[v]++;
-    for (int i = 0; i < cnt; i++) g[i].reserve(c[i]);
-    for (int i = 0; i < G.size(); i++) g[ids[i]].push_back(i);
+    for (auto &&v : ids) ++c[v];
+    for (int i = 0; i < cnt; ++i) g[i].reserve(c[i]);
+    for (int i = 0; i < G.size(); ++i) g[ids[i]].push_back(i);
     return g;
 }
 /**

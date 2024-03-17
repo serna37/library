@@ -16,7 +16,7 @@ pair<vector<T>, vector<int>> BellmanFord(const Graph<T> &G, int s) {
     while (1) {
         ++loop;
         bool upd = 0;
-        for (int v = 0; v < N; v++) {
+        for (int v = 0; v < N; ++v) {
             if (dis[v] == inf<T>) continue;
             for (auto &&[from, to, cost, id] : G[v]) {
                 T asis = dis[to], tobe = dis[v] + cost;

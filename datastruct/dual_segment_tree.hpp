@@ -37,11 +37,11 @@ template <typename Monoid> struct DualSegTree {
     }
     T operator[](int p) {
         p += size;
-        for (int i = log; i >= 1; i--) propagate(p >> i);
+        for (int i = log; i >= 1; --i) propagate(p >> i);
         return lazy[p];
     }
     vector<T> getall() {
-        for (int i = 1; i < size; i++) propagate(i);
+        for (int i = 1; i < size; ++i) propagate(i);
         return {lazy.begin() + size, lazy.begin() + size + N};
     }
     void set(int p, const T &x) {
@@ -52,7 +52,7 @@ template <typename Monoid> struct DualSegTree {
     void apply(int l, int r, const T &a) {
         if (l == r) return;
         l += size, r += size;
-        for (int i = log; i >= 1; i--) {
+        for (int i = log; i >= 1; --i) {
             if (((l >> i) << i) != l) propagate(l >> i);
             if (((r >> i) << i) != r) propagate((r - 1) >> i);
         }
