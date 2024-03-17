@@ -6,11 +6,10 @@ work_dir=__work
 
 # whitelist
 no_del=(
-cpp.snippets
-template.snippets
-io.snippets
-algo.snippets
-call.snippets
+cpp.template.snippets
+cpp.custom.snippets
+cpp.algorithm.snippets
+cpp.lib_call.snippets
 )
 
 genact -s 10 --exit-after-modules 1 -m botnet
