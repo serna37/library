@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 /**
- * mod二分累乗
+ * mod二分累乗 O(logN)
  */
 long long modpow(long long a, long long n) {
     long long ans = 1ll;

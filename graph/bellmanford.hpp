@@ -3,7 +3,7 @@ using namespace std;
 lib_others_inf
 lib_graph_base
 /**
- * ベルマンフォード
+ * ベルマンフォード O(VE)
  * @brief 単一始点
  * @return 最短距離、経路
  */

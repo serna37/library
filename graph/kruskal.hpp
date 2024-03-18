@@ -10,7 +10,7 @@ template <typename T> struct MinSpanTree {
     vector<Edge<T>> edges;
 };
 /**
- * クラスカル
+ * クラスカル O(ElogV)
  * @return 最小全域木
  */
 template <typename T, typename UF>

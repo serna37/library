@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 /**
- * コンビネーション
+ * コンビネーション O(k)
  */
 template <typename T> T nCk(int n, int k) {
     if (k < 0 || n < k) return 0;

@@ -3,7 +3,7 @@ using namespace std;
 lib_others_inf
 lib_graph_base
 /**
- * ワーシャルフロイド
+ * ワーシャルフロイドO(V^3)
  * @brief 全頂点対
  * @return 最短距離、負サイクル有無
  */

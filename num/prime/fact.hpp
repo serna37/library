@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 /**
- * 素因数分解
+ * 素因数分解 O(√N)
  * @brief ナイーブ
  * @brief 無い素因数は、mapにないので注意
  */

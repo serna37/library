@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 /**
- * 素数判定
+ * 素数判定 O(√N)
  */
 template <typename T> bool is_p(T N) {
     if (N == 2) return true;

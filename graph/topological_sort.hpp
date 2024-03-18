@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 /**
- * トポロジカルソート
+ * トポロジカルソート O(V+E)
  */
 template <typename Graph> vector<int> topological_sort(const Graph &G) {
     int N = G.size();

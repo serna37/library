@@ -2,7 +2,7 @@
 using namespace std;
 lib_graph_base
 /**
- * サイクル検出
+ * サイクル検出 O(V+E)
  * @return サイクルな辺の集合
  */
 template <typename T>

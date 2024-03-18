@@ -2,7 +2,7 @@
 using namespace std;
 lib_graph_base
 /**
- * 強連結成分分解
+ * 強連結成分分解 O(V+E)
  * @return sccのid、scc集合
  */
 template <typename Graph>
