@@ -9,7 +9,7 @@ no_del=(
 cpp.template.snippets
 cpp.custom.snippets
 cpp.algorithm.snippets
-cpp.lib_call.snippets
+cpp.lib.call.snippets
 )
 
 genact -s 10 --exit-after-modules 1 -m botnet
