@@ -10,7 +10,7 @@ vector<T> convolution(const vector<T> &A, const vector<T> &B) {
     int c = a + b - 1;
     vector<T> C(c);
     for (int i = 0; i < c; ++i) {
-        int tmp = 0;
+        T tmp = 0;
         // Σ 添え字の和がiになる項同士の積
         for (int j = 0; j <= i; ++j) {
             tmp += A[j] * B[i - j];
