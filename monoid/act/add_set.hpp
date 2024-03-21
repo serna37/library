@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-lib_others_inf
 lib_monoid_add
 lib_monoid_set
 /**
