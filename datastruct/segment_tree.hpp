@@ -45,7 +45,7 @@ template <typename Monoid> struct SegTree {
         node[i] = M::op(node[i], x);
         while (i >>= 1) update(i);
     }
-    T get(int l, int r) {
+    T prod(int l, int r) {
         T L = M::e, R = M::e;
         for (l += size, r += size; l < r; l >>= 1, r >>= 1) {
             if (l & 1) L = M::op(L, node[l++]);

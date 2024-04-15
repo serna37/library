@@ -37,7 +37,7 @@ template <typename Monoid> struct FwkTree {
         bind(tot, x);
         for (++i; i <= N; i += i & -i) bind(node[i], x);
     }
-    T get(int r) {
+    T prod(int r) {
         T ans = M::e;
         for (++r; r; r -= r & -r) bind(ans, node[r]);
         return ans;

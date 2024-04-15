@@ -67,7 +67,7 @@ template <typename MonoidAct> struct LazySegTree {
         node[p] = M::op(node[p], x);
         for (int i = 1; i <= log; ++i) update(p >> i);
     }
-    T get(int l, int r) {
+    T prod(int l, int r) {
         if (l == r) return M::e;
         l += size, r += size;
         for (int i = log; i >= 1; --i) {
