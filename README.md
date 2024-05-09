@@ -93,7 +93,7 @@ AtCoder の問題は，dropbox (https://atcoder.jp/posts/20) にあれば割と�
 棲み分けの基準は`まるごとコピペかどうか`としてます、丸ごとコピペはこっちで管理。
 
 ## スニペット自動作成
-- `snippets.sh`をzshで実行。([`genact`](https://github.com/svenstaro/genact)や[`cmatrix`](https://github.com/abishekvashok/cmatrix)などおふざけコマンドいれてるので注意)
+- `snippets.sh`をzshで実行。([`genact`](https://github.com/svenstaro/genact)などおふざけコマンドいれてるので注意)
 - 何かあれば`snippets.sh`をカスタムする
 - 200文字を超えないように分割してバンドル(1ファイルが長すぎると呼び出しが重いため)
 - スニペットトリガの命名規則
