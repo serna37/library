@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+lib_graph_base
 /**
  * トポロジカルソート O(V+E)
  */
