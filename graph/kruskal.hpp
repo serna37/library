@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+lib_others_inf
 lib_datastruct_union_find
 lib_graph_base
 /**
@@ -25,6 +26,10 @@ MinSpanTree<T> Kruskal(vector<Edge<T>> edges, int v_cnt) {
             es.emplace_back(e);
             total += e.cost;
         }
+    }
+    // 全域に達しない場合
+    if (tree.size(0) < v_cnt) {
+        total = inf<T>;
     }
     return {total, es};
 }
