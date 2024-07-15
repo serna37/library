@@ -1,16 +1,13 @@
 # profile
 library_root=~/git/library/
 snippet_dir=~/.vim/UltiSnips/
+dotfiles_snippet_dir=~/git/dotfiles/snippets/
 trigger_prefix=lib
 work_dir=__work
 
 # whitelist
-no_del=(
-cpp.template.snippets
-cpp.custom.snippets
-cpp.algorithm.snippets
-cpp.lib.call.snippets
-)
+cd $dotfiles_snippet_dir
+no_del=($(ls))
 
 genact -s 10 --exit-after-modules 1 -m botnet
 echo "===================================================="
