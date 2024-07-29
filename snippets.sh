@@ -9,7 +9,9 @@ work_dir=__work
 cd $dotfiles_snippet_dir
 no_del=($(ls))
 
-genact -s 10 --exit-after-modules 1 -m botnet
+if command -v genact > /dev/null 2>&1; then
+    genact -s 10 --exit-after-modules 1 -m botnet
+fi
 echo "===================================================="
 echo " START"
 echo "===================================================="
@@ -75,4 +77,6 @@ done
 echo "===================================================="
 echo " DONE"
 echo "===================================================="
-genact -s 10 --exit-after-modules 1 -m bruteforce
+if command -v genact > /dev/null 2>&1; then
+    genact -s 10 --exit-after-modules 1 -m bruteforce
+fi
