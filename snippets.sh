@@ -1,7 +1,7 @@
 # profile
 library_root=~/git/library/
 snippet_dir=~/.vim/UltiSnips/
-dotfiles_snippet_dir=~/git/dotfiles/snippets/
+dotfiles_snippet_dir=~/git/dotfiles/conf/cpp/snippets
 trigger_prefix=lib
 work_dir=__work
 
