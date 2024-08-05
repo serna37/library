@@ -31,7 +31,7 @@ vector<Edge<T>> cycle_detect(const Graph<T> &G, bool directed) {
     auto restruct = [&](int pos) -> vector<Edge<T>> {
         vector<Edge<T>> cycle;
         while (!history.empty()) {
-            const Edge<T> &e = history.back();
+            const Edge<T> e = history.back();
             cycle.push_back(e);
             history.pop_back();
             if (e.from == pos) break;
